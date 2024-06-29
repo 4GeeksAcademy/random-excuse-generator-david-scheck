@@ -6,6 +6,9 @@ window.onload = function() {
   //write your code here
   console.log("Hello World");
   displayResult();
+  document
+    .getElementById("generateExcuse")
+    .addEventListener("click", displayResult);
 };
 
 let who = ["The dog", "My grandma", "The mailman", "My bird"];
@@ -37,6 +40,5 @@ function randomAnswers() {
 }
 
 function displayResult() {
-  let excuse = randomAnswers();
-  document.getElementById("theExcuse").innerHTML = excuse;
+  document.getElementById("theExcuse").innerHTML = randomAnswers();
 }
